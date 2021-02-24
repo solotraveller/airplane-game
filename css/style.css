@@ -1,0 +1,62 @@
+/* 背景 */
+*{
+	margin: 0;
+	padding: 0;
+}
+ol,ul,li{
+	list-style: none;
+}
+
+/* 游戏区 */
+.wrap{
+	width: 500px;
+	height: 500px;
+	background-color: #ddd;
+	margin: 20px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+/* 飞机 */
+.airplaneDiv{
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	cursor: pointer;
+	background-image: url('../images/airBg.png');
+	background-repeat: no-repeat;
+	background-size: contain; 
+}
+
+/* 子弹 */
+.bulletDiv{
+	width: 5px;
+	height: 30px;
+	background-color: #f00;
+	border-radius: 100%;
+	position: absolute;
+}
+
+/* 目标 */
+.targetDiv{
+	width: 60px;
+	height: 50px;
+	position: absolute;
+	top: -60px;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+/* 爆炸 */
+@keyframes mymove{
+	from{opacity: 1;}
+	to{opacity: 0;}
+}
+.no-boom{
+	background-image: url('../images/target_icon.png');
+}
+.yes-boom{
+	background-image: url('../images/boom.png');
+	animation: mymove 0.2s;
+	animation-fill-mode: forwards; 
+}
